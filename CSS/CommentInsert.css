@@ -1,0 +1,64 @@
+.comment-insert{
+    height: 150px;
+    width: auto;
+    margin: 10px 5px 10px 5px;
+    border: 1px solid #E1E1E1;
+    position: relative;
+}
+
+.comment-insert .who-says{
+    height: 35px;
+    width: auto;
+    line-height: 32px;
+    color: #2E5CB8;
+    font-size: 14px;
+    margin: 0 10px 0 10px;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.comment-insert .who-says span{
+    color: #254A93;
+}
+
+.comment-insert .comment-insert-container{
+    margin: 5px 10px 5px 10px;
+    border: 1px solid #E1E1E1;
+    width: auto;
+    min-height: 102px;
+    position: relative;
+}
+
+.comment-insert .comment-insert-container:hover{
+    border: 1px solid #C1C1C1;
+}
+
+.comment-insert textarea.comment-insert-text{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: #555555;
+}
+
+.comment-post-btn-wrapper{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 60px;
+    height: 25px;
+    line-height: 22px;
+    background: #6989CC;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.comment-post-btn-wrapper:hover{
+    background: #5E7BB8;
+    color: #EAEAEA;
+}
