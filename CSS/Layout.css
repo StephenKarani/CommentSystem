@@ -1,61 +1,61 @@
-@import url('CommentInsert.css');
+@import url('comment_insert.css');
 
-* {
+ * {
     margin: 0px;
     padding: 0px;
-    font-family: arial;
+    font-family: Arial;
 }
 
-body{
-    background: #C7C7C7;
+body {
+    background: #c7c7c7;
 }
 
-a img{
+a img {
     border: none;
 }
 
-.wrapper{
-    background: #FFFFFF;
+.wrapper {
     width: 750px;
-    border: 1px solid #A1A1A1;
+    border: 1px solid #a1a1a1;
     margin: 10px auto 10px auto;
     height: auto;
+    background: #ffffff;
 }
 
-.page-data{
+.page-data {
     width: auto;
     height: 50px;
     color: #666666;
     margin: 10px;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #e1e1e1;
 }
 
-.comment-wrapper{
+.comment-wrapper {
     margin: 10px;
-    border: 1px solid #E1E1E1;
+    border: 1px solid #e1e1e1;
     height: auto;
     width: auto;
     color: #444444;
 }
 
-h3.comment-title{
+h3.comment-title {
     height: 40px;
     line-height: 37px;
     font-size: 14px;
     margin: 0 5px 0 5px;
     color: #555555;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #e1e1e1;
 }
 
-.comment-list{
+.comments-list {
     height: auto;
     font-size: 13px;
     margin: 10px 5px 5px 5px;
     color: #555555;
 }
 
-ul.comments-holder-ul{
-    list-style: none;
+ul.comments-holder-ul {
+    list-style-type: none;
     margin: 0px;
     padding: 0px;
     width: auto;
@@ -63,56 +63,57 @@ ul.comments-holder-ul{
     overflow: hidden;
 }
 
-ul.comments-holder-ul li.comment-holder{
+ul.comments-holder-ul li.comment-holder {
     list-style-type: none;
-    background: #FFFFF5;
+    background: #fffff5;
     height: auto;
     width: auto;
     margin: 5px 0 10px 0;
-    border: 1px solid #E1E1E1;
+    border: 1px solid #e1e1e1;
     overflow: hidden;
     position: relative;
 }
 
-ul.comments-holder-ul li.comment-holder:hover{
-    background: #FFFFDB;
-    border: 1px solid #C1C1C1;
+ul.comments-holder-ul li.comment-holder:hover {
+    background: #ffffdb;
+    border: 1px solid #c1c1c1;
 }
 
-ul.comments-holder-ul li.comment-holder .user-img{
+ul.comments-holder-ul li.comment-holder .user-img {
     float: left;
     height: 65px;
     width: 65px;
     margin: 0 10px 0 0;
 }
 
-ul.comments-holder-ul li.comment-holder .user-img img.user-img-pic{
+ul.comments-holder-ul li.comment-holder .user-img .user-img-pic {
     width: 55px;
     height: auto;
     margin: 5px;
-    border: 1px solid #E1E1E1;
+    border: 1px solid #a1a1a1;
 }
 
-ul.comments-holder-ul li.comment-holder .user-img img.user-img-pic:hover{
+ul.comments-holder-ul li.comment-holder .user-img .user-img-pic:hover {
     border: 1px solid #818181;
 }
-.comment-body{
+
+ul.comments-holder-ul li.comment-holder .comment-body {
     width: auto;
 }
 
-ul.comments-holder-ul li.comment-holder h3.username-field{
+ul.comments-holder-ul li.comment-holder h3.username-field {
     height: 30px;
     line-height: 27px;
-    color: #2E5CB8;
+    color: #2e5cb8;
     font-size: 14px;
     margin: 0 0 0 10px;
 }
 
-ul.comments-holder-ul li.comment-holder h3.username-field:hover{
-    color: #254A93;
+ul.comments-holder-ul li.comment-holder h3.username-field:hover {
+    color: #254a93;
 }
 
-ul.comments-holder-ul li.comment-holder .comment-text{
+ul.comments-holder-ul li.comment-holder .comment-text {
     display: block;
     width: auto;
     font-size: 13px;
@@ -120,11 +121,11 @@ ul.comments-holder-ul li.comment-holder .comment-text{
     word-wrap: normal;
 }
 
-ul.comments-holder-ul li.comment-holder:hover .comment-button-holder{
+ul.comments-holder-ul li.comment-holder:hover .comment-buttons-holder {
     display: block;
 }
 
-.comment-button-holder{
+.comment-buttons-holder {
     display: none;
     position: absolute;
     top: 0px;
@@ -133,25 +134,25 @@ ul.comments-holder-ul li.comment-holder:hover .comment-button-holder{
     height: 20px;
 }
 
-.comment-button-holder ul{
+.comment-buttons-holder ul {
     list-style-type: none;
     width: auto;
     height: auto;
     overflow: hidden;
 }
 
-.comment-button-holder ul li{
+.comment-buttons-holder ul li {
     float: right;
     height: 20px;
     width: 20px;
+    background: #2e5cb8;
     text-align: center;
     line-height: 18px;
-    color: #FFFFFF;
-    background: #2E5CB8;
+    color: #ffffff;
     cursor: pointer;
 }
 
-.comment-button-holder ul li:hover{
+.comment-buttons-holder ul li:hover {
     color: #444444;
-    background: #6D8DCD;
+    background: #6d8dcd;
 }

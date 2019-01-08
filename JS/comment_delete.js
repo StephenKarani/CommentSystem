@@ -1,30 +1,26 @@
-$(document).ready(function(){
-    add_delete_handler();
+$(document).ready(function () {
+    add_delete_handlers();
 });
 
-function add_delete_handler(){
-    $('.delete-btn').each(function(){
+function add_delete_handlers() {
+    $('.delete-btn').each(function () {
         var btn = this;
-        $(btn).click(function(){
+        $(btn).click(function () {
             comment_delete(btn.id);
         });
     });
 }
 
-function comment_delete(commentId){
-    $.post('AJAX/comment_delete.php',
+function comment_delete(_commentId) {
+    $.post(
+        'ajax/comment_delete.php',
         {
-            task: "comment_delete",
-            comment_id: commentId
+            task: 'comment_delete',
+            commentId: _commentId
         }
-    ).done(
-        function(data){
-            console.log(data);
-            $('#_' + commentId).detach();
-        }
-    ).fail(
-        function(){
-            console.log("Error Occurred while deleting..");
+    ).then(
+        function (data) {
+            $('#' + _commentId).detach();
         }
     );
 }

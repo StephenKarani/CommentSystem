@@ -1,0 +1,13 @@
+CREATE TABLE `comment_system`.`subscribers` (
+  `userId` INT(11) NOT NULL AUTO_INCREMENT ,
+  `userName` VARCHAR(255) NOT NULL ,
+  `profile_img` VARCHAR(255) NOT NULL ,
+  PRIMARY KEY (`userId`)
+) ENGINE = MyISAM;
+
+CREATE TABLE `comment_system`.`comments` (
+  `commentId` INT(11) NOT NULL AUTO_INCREMENT ,
+  `userId` INT(11) NOT NULL ,
+  `comment` TEXT NOT NULL ,
+  PRIMARY KEY (`commentId`)
+) ENGINE = MyISAM;

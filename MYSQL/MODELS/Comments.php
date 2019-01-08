@@ -1,32 +1,44 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Programmer
+ * Date: 1/8/2019
+ * Time: 11:46 AM
+ */
 require_once MODELS_DIR . 'Subscribers.php';
 
-class Comments {
+class Comments
+{
     public static function getComments(){
         $output = array();
-        $sql = "SELECT * FROM COMMENTS ORDER BY COMMENT_ID ASC";
-        $query = mysql_query($sql);
+        $connect = mysqli_connect('localhost', 'root', '', 'comment_system');
+        $sql = "SELECT * FROM comments ORDER BY commentId DESC";
+        $query = mysqli_query($connect, $sql);
         if($query){
-            if(mysql_num_rows($query) > 0){
-                while($row = mysql_fetch_object($query)){
+            if(mysqli_num_rows($query)){
+                while ($row = mysqli_fetch_object($query)){
                     $output[] = $row;
                 }
             }
         }
+
         return $output;
     }
 
-    public static function insert($comment, $userId){
-        //Insert Data
-        $sql = "INSERT INTO COMMENTS VALUES ('', '$comment', '$userId')";
-        $query = mysql_query($sql);
+    public static function insert($comment_text, $userId){
+        $connect = mysqli_connect('localhost', 'root', '', 'comment_system');
+        $comment_text = addslashes($comment_text);
+
+        //Insert data into the database
+        $sql = "INSERT INTO comments VALUES ('',  '$userId', '$comment_text')";
+        $query = mysqli_query($connect, $sql);
 
         if($query){
-            $insert_id = mysql_insert_id();
-            //Return a stdClass Object From the database
+            $insert_id = mysqli_insert_id($connect);
+
             $std = new stdClass();
             $std->comment_id = $insert_id;
-            $std->comment = $comment;
+            $std->comment = $comment_text;
             $std->userId = (int)$userId;
 
             return $std;
@@ -35,16 +47,16 @@ class Comments {
         return null;
     }
 
-    public static function update($data){
-
-    }
+    public static function update($data){}
 
     public static function delete($commentId){
-        $sql = "DELETE FROM COMMENTS WHERE comment_id = $commentId";
-        $query = mysql_query($sql);
+        $connect = mysqli_connect('localhost', 'root', '', 'comment_system');
+        $sql = "DELETE FROM comments WHERE commentId = $commentId";
+        $query = mysqli_query($connect, $sql);
         if($query){
             return true;
         }
-        return false;
+
+        return null;
     }
 }
